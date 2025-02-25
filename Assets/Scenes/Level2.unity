@@ -591,7 +591,7 @@ MonoBehaviour:
   minInstatiateValue: -9
   maxInstatiateValue: 9
   destroyTime: 7
-  spawnRate: 2.96
+  spawnRate: 1
   asteroidPrefabs:
   - {fileID: 8454871528820614448, guid: 71be2aa09bc8b3845aaffaa5d427b23d, type: 3}
   - {fileID: 3598868819692315555, guid: 8dd5535b6a0a45f43892722dbe9c2a88, type: 3}

@@ -137,7 +137,7 @@ MonoBehaviour:
   enemySpeed: 3
   bulletPrefab: {fileID: 2144367334502580641, guid: 452967101c7c5be4f8172e5be7ee50cb, type: 3}
   firePoint: {fileID: 7166911021882445510}
-  fireRate: 2
+  fireRate: 1
   pointPerKill: 2
 --- !u!61 &-240372159902855720
 BoxCollider2D:
