@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433ddee7b135cdf4581e05f409a89bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ringValue: 5
+  ringValue: 10
   speed: 3
 --- !u!61 &2816750938644177441
 BoxCollider2D:
