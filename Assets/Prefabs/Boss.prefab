@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.336, y: 2.3295, z: 0}
-  m_LocalScale: {x: 1.2514653, y: 1.2833503, z: 1}
+  m_LocalScale: {x: 0.95349145, y: 0.99549484, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   shootRadius: 2
   shootInterval: 2
   projectileSpeed: 4
-  bossHealth: 30
+  bossHealth: 50
 --- !u!61 &612523537861663877
 BoxCollider2D:
   m_ObjectHideFlags: 0

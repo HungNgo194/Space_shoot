@@ -3,6 +3,12 @@ using UnityEngine;
 public class PowerUpController : MonoBehaviour
 {
     [SerializeField] private float speed;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Update()
     {
         // Move enemy downward
@@ -19,7 +25,7 @@ public class PowerUpController : MonoBehaviour
             {
                 player.ActivateDoubleMissile();
             }
-
+            audioManager.PlaySFX(audioManager.collect);
             Destroy(gameObject); // Remove power-up after collection
         }
     }

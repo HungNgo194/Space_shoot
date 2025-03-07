@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private bool doubleMissiles = false;
     private float powerUpTime = 0;
 
+    private int numberOfMissiles = 1;
+
     AudioManager audioManager;
 
 
@@ -75,19 +77,38 @@ public class PlayerController : MonoBehaviour
             SpawnMuzzle();
         }
     }
-
     private void SpawnMissile()
     {
-        if (doubleMissiles)
+        if (numberOfMissiles == 2)
         {
-            Instantiate(missile, missileSpawnPosition.position + new Vector3(-0.3f, 0, 0), Quaternion.identity);
-            Instantiate(missile, missileSpawnPosition.position + new Vector3(0.3f, 0, 0), Quaternion.identity);
+            InstantiateMissile(-0.3f, 0);
+            InstantiateMissile(0.3f, 0);
+        }
+        else if (numberOfMissiles >= 3)
+        {
+            float angleStep = 60f / (numberOfMissiles - 1);
+            float startAngle = -30f;
+
+            for (int i = 0; i < numberOfMissiles; i++)
+            {
+                float angle = startAngle + (i * angleStep);
+                InstantiateMissile(0, 0, angle);
+            }
         }
         else
         {
-            Instantiate(missile, missileSpawnPosition.position, Quaternion.identity);
+            InstantiateMissile(0, 0);
         }
     }
+
+    private void InstantiateMissile(float offsetX, float offsetY, float angle = 0)
+    {
+        Vector3 spawnPosition = missileSpawnPosition.position + new Vector3(offsetX, offsetY, 0);
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+        Instantiate(missile, spawnPosition, rotation);
+    }
+
+
 
     private void SpawnMuzzle()
     {
@@ -99,7 +120,7 @@ public class PlayerController : MonoBehaviour
     {
         if ((collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Asteroids") || collision.gameObject.CompareTag("Boss")) && !isInvincible)
         {
-            audioManager.PlaySFX(audioManager.explode);
+            audioManager.PlaySFX(audioManager.hit);
             GameObject gm = Instantiate(GameManager.instance.explosion, transform.position, transform.rotation);
             Destroy(gm, 1f);
 
@@ -137,7 +158,6 @@ public class PlayerController : MonoBehaviour
 
     public void ActivateDoubleMissile()
     {
-        doubleMissiles = true;
-        powerUpTime = Time.time + 5f;
+        numberOfMissiles++;
     }
 }

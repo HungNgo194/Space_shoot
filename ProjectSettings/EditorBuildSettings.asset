@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: d91d3bfa45f01754983eccaa2cb80a9f
+  - enabled: 1
+    path: Assets/Scenes/Survival.unity
+    guid: 87be4db5cd45d08488af9c937f95094e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

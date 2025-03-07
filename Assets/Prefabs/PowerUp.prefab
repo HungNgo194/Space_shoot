@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2545418788991728942}
   - component: {fileID: -6222565763350891559}
   - component: {fileID: 1143837985719324163}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PowerUp
-  m_TagString: Untagged
+  m_TagString: Rewards
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

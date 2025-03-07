@@ -11,7 +11,18 @@ public class BossController : MonoBehaviour
     [SerializeField] private float shootInterval = 2f;
     [SerializeField] private float projectileSpeed = 3f;
     [SerializeField] private int bossHealth;
+    
+    private float rotationSpeed = 100f;
+    private void Awake()
+    {
+        rotationSpeed *= Random.Range(0, 2) == 0 ? 1 : -1;
+        
+    }
 
+    private void Update()
+    {
+        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+    }
     private void Start()
     {
         StartCoroutine(ShootOrbitProjectiles());

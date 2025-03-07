@@ -28,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        audioManager.PlaySFX(audioManager.explode);
+        audioManager.PlaySFX(audioManager.hit);
         Destroy(gameObject);
     }
 

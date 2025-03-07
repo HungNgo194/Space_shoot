@@ -10,6 +10,8 @@ TagManager:
   - Asteroids
   - Boss
   - Audio
+  - Missile
+  - Rewards
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - Asteroid
   - EnemyBullet
   - Player
-  - 
-  - 
+  - Missile
+  - Rewards
   - 
   - 
   - 

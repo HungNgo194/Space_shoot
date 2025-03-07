@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 826647436244115025}
   - component: {fileID: 1357339141480351249}
   - component: {fileID: -2485263750268876917}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Missile
-  m_TagString: Untagged
+  m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3227568, y: 0.29683325, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -137,17 +137,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.000851132, y: 0.0017023683}
+  m_Offset: {x: -0.000851132, y: 0.1659949}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.52}
+    oldSize: {x: 0.32, y: 1.04}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.14978592, y: 0.50638103}
+  m_Size: {x: 0.14978592, y: 0.703532}
   m_EdgeRadius: 0
 --- !u!50 &-2485263750268876917
 Rigidbody2D:

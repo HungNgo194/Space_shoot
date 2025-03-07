@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class RingController : MonoBehaviour
+public class HeartController : MonoBehaviour
 {
-    
-    [SerializeField] private int ringValue;
     [SerializeField] private float speed;
 
     AudioManager audioManager;
@@ -14,7 +12,6 @@ public class RingController : MonoBehaviour
     }
     private void Update()
     {
-        // Move enemy downward
         transform.Translate(Vector3.down * speed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
@@ -22,8 +19,8 @@ public class RingController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.instance.AddScore(ringValue);
-            Destroy(gameObject); // Remove ring after collection
+            GameManager.instance.IncreasePlayerHealth();
+            Destroy(gameObject);
             audioManager.PlaySFX(audioManager.collect);
         }
     }
